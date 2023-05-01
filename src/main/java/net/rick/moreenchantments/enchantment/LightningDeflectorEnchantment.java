@@ -18,14 +18,22 @@ public class LightningDeflectorEnchantment extends Enchantment {
     @Override
     public int getDamageProtection(int level, DamageSource source) {
         if (source.is(DamageTypeTags.IS_LIGHTNING)) {
+            System.out.println("say Damage source is lightning");
             if (level == 1) {
-                return (int) 0.25F;
+                int protection = (int) 33.3F;
+                System.out.println("Protection level 1: " + protection + "%");
+                return protection;
             } else if (level == 2) {
-                return (int) 0.5F;
+                int protection = (int) 77.7F;
+                System.out.println("Protection level 2: " + protection + "%");
+                return protection;
             } else if (level == 3) {
-                return (int) 1.0F;
+                int protection = (int) 199.9F;
+                System.out.println("Protection level 3: " + protection + "%");
+                return protection;
             }
         }
+
         return (int) 0.0F;
     }
 }
