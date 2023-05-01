@@ -39,6 +39,16 @@ public class LightningStrikerEnchantment extends Enchantment {
     }
 
     @Override
+    public boolean isTradeable() {
+        return super.isTradeable();
+    }
+
+    @Override
+    public boolean isAllowedOnBooks() {
+        return super.isAllowedOnBooks();
+    }
+
+    @Override
     public int getMaxLevel() {
         return 2;
     }

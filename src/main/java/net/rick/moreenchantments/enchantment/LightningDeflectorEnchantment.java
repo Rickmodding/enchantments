@@ -7,13 +7,18 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 
 public class LightningDeflectorEnchantment extends Enchantment {
-    public LightningDeflectorEnchantment(Rarity pRarity, EnchantmentCategory pCategory, EquipmentSlot... pApplicableSlots) {
-        super(pRarity, pCategory, new EquipmentSlot[] {EquipmentSlot.HEAD});
+    public LightningDeflectorEnchantment(Rarity pRarity) {
+        super(pRarity, EnchantmentCategory.ARMOR_HEAD, new EquipmentSlot[] {EquipmentSlot.HEAD});
     }
 
     @Override
     public int getMaxLevel() {
         return 3;
+    }
+
+    @Override
+    public boolean isTradeable() {
+        return super.isTradeable();
     }
 
     @Override
