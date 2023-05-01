@@ -17,6 +17,10 @@ public static RegistryObject<Enchantment> LIGHTNING_STRIKER =
         ENCHANTMENTS.register("lightning_striker",
                 () -> new LightningStrikerEnchantment(Enchantment.Rarity.UNCOMMON,
                         EnchantmentCategory.WEAPON, EquipmentSlot.MAINHAND));
+public static RegistryObject<Enchantment> LIGHTNING_DEFLECTOR =
+        ENCHANTMENTS.register("lightning_deflector",
+                () -> new LightningDeflectorEnchantment(Enchantment.Rarity.UNCOMMON,
+                        EnchantmentCategory.WEAPON, EquipmentSlot.HEAD));
 
     public static void register(IEventBus modEventBus) {
         ENCHANTMENTS.register(modEventBus);

@@ -19,6 +19,9 @@ public class LightningStrikerEnchantment extends Enchantment {
             ServerLevel world = ((ServerLevel) pAttacker.level);
             BlockPos position = pTarget.blockPosition();
 
+            boolean isAttackerTheTarget = pAttacker == pTarget;
+
+
             if(pLevel == 1) {
                 EntityType.LIGHTNING_BOLT.spawn(world, null, (Consumer<LightningBolt>) null, position,
                         MobSpawnType.TRIGGERED, true, true);
