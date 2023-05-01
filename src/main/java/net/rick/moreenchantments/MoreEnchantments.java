@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.rick.moreenchantments.enchantment.ModEnchantments;
 import org.slf4j.Logger;
 
 @Mod(MoreEnchantments.MOD_ID)
@@ -26,6 +27,7 @@ public class MoreEnchantments {
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
+        ModEnchantments.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
