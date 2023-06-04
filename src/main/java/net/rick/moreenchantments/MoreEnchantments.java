@@ -11,6 +11,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.rick.moreenchantments.enchantment.ModEnchantments;
+import net.rick.moreenchantments.init.BlockInit;
+import net.rick.moreenchantments.init.EnchantmentInit;
+import net.rick.moreenchantments.init.ItemInit;
 import org.slf4j.Logger;
 
 @Mod(MoreEnchantments.MOD_ID)
@@ -28,6 +31,10 @@ public class MoreEnchantments {
 
         modEventBus.addListener(this::addCreative);
         ModEnchantments.register(modEventBus);
+        BlockInit.BLOCKS.register(modEventBus);
+        ItemInit.ITEMS.register(modEventBus);
+        EnchantmentInit.ENCHANTMENTS.register(modEventBus);
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
