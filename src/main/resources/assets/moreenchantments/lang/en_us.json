@@ -1,4 +1,8 @@
 {
+  "enchantment.moreenchantments.lava_walker": "Lava Walker",
+  "enchantment.moreenchantments.lava_walker.desc": "You can walk over the lava.",
+  "block.moreenchantments.modded_obsidian": "Obsidian",
+  "block.moreenchantments.modded_crying_obsidian": "Crying Obsidian",
   "enchantment.moreenchantments.lightning_striker": "Lightning Striker",
   "enchantment.moreenchantments.lightning_deflector": "Lightning deflector"
 }
